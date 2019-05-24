@@ -228,24 +228,13 @@ public class FindNameinFile {
 								String  indexNameStr=strBuffer.toString().substring(beginNameIndex, endNameIndex);
 								System.out.println("获取到的Name："+indexNameStr);
 								String  saveName =indexNameStr+indexStr ;
-							 
-								int  begContentIndex =strBuffer.toString().indexOf("\"facePhoto\":\"")+13;
-								int  endContentIndex =strBuffer.toString().indexOf("\",\"face_token\":");
-								String  fromContent=strBuffer.toString().substring(begContentIndex, endContentIndex);
-//							    writer=   new BufferedWriter(new FileWriter(new  File( "E:\\马琳\\"+saveName+".txt")));
-//								writer.write(fromContent);
 								System.out.println(saveName+"     文件处理完成！----》当期处理文件为"+txtFile.getName());
-								
-								
 							}
 							strBuffer.setLength(0);
 							lineTxt=reader.readLine();
 						}	
-
 						}
 					}
-				
-				
 				
 				 writer=   new BufferedWriter(new FileWriter(new  File( "E:\\马琳\\返回码信息汇总.txt")));
 				 
@@ -276,12 +265,6 @@ public class FindNameinFile {
 					}
 				   
 					System.out.println("-----返回码汇总文件处理完成！----");
-					
-				
-				
-				
-				
-				
 				
 				  reader.close();
 			      writer.close();;
