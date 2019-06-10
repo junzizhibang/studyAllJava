@@ -126,9 +126,11 @@ public class FindNameinFile {
 	
 	public static void main(String[] args) {
 	//	FindNameinFile   util=  new findNameByFile("facePhoto","E:\\马琳");
-		FindNameinFile   util=  new FindNameinFile( );
+//		FindNameinFile   util=  new FindNameinFile( );
 //		util.readContent("E:\\马琳\\", "facePhoto");
-		util.findAllCode("E:\\马琳\\", "facePhoto");
+//		util.findAllCode("E:\\马琳\\", "facePhoto");
+		 printFileName("E:\\root\\codes\\study-imooc-master\\");
+		
 	}
 	
 	/****
@@ -281,5 +283,28 @@ public class FindNameinFile {
 	}
 	
 	
+	/**
+	*@功能描述   输入文件名路径输入文件名下面的文件名称     
+	*@作者      马琳-脚踏实地积累。Java进阶
+	*@email    1217575485@qq.com
+	*
+	*printFileName(E:\root\codes\study-imooc-master)
+	*  
+	*/
+	private static  void printFileName(String  fileName) {
+	 File  file=new  File(fileName);
+	 if(file.isDirectory()) {
+		 File[]  files=file.listFiles();
+		 for (int i = 0; i < files.length; i++) {
+			 System.out.println("<modules>"+files[i].getName()+"</modules>");
+			
+		}
+		 
+		 
+	 }
+		
+		
+		
+	}
 
 }
