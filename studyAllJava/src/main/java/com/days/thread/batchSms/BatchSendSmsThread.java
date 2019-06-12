@@ -48,7 +48,7 @@ public class BatchSendSmsThread extends Thread {
 		List<UserInfo> list = new ArrayList<UserInfo>();
 		for (int i = 1; i <= 140; i++) {
 			UserInfo userEntity = new UserInfo();
-			userEntity.setId("id" + i);
+			userEntity.setId( i);
 			userEntity.setUserName("userName" + i);
 			userEntity.setContent("模拟新建" + i + "条短信！");
 			list.add(userEntity);

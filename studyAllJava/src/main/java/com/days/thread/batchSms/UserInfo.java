@@ -12,6 +12,8 @@
 
 package com.days.thread.batchSms;
 
+import java.io.Serializable;
+
 /**
  * 功能说明：    短信信息
  * 初始版本基础夯实积攒Java架构师的基础内容  
@@ -20,12 +22,25 @@ package com.days.thread.batchSms;
  * @email 1217575485@qq.com
  * 
  */
-public class UserInfo {
+public class UserInfo   implements  Serializable{
 
 	
+	 /**
+	 * long
+	 */
+	private static final long serialVersionUID = 1L;
+	 private   int	id   ;
      private   String	userName   ;
-     private   String	id   ;
      private   String	content   ;
+     private   String	description   ;
+     private   String	passWord   ;
+     private   String	telNum   ;
+     private   int	age   ;
+     private   String	sex   ;
+     private   String	reserve1   ;
+     private   String	reserve2   ;
+     private   String	reserve3   ;
+     private   String	reserve4   ;
 	/**
 	 *get方法
 	 *
@@ -35,7 +50,7 @@ public class UserInfo {
 		return userName;
 	}
 	/**
-	 *set 方法
+	 * set 方法
 	 *
 	 * @param userName 
 	 */
@@ -47,15 +62,15 @@ public class UserInfo {
 	 *
 	 * @return 
 	 */
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 	/**
-	 *set 方法
+	 * set 方法
 	 *
 	 * @param id 
 	 */
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	/**
@@ -67,7 +82,7 @@ public class UserInfo {
 		return content;
 	}
 	/**
-	 *set 方法
+	 * set 方法
 	 *
 	 * @param content 
 	 */
@@ -75,16 +90,164 @@ public class UserInfo {
 		this.content = content;
 	}
 	/**
-	 * toString
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public String getDescription() {
+		return description;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param description 
+	 */
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	/**
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public String getPassWord() {
+		return passWord;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param passWord 
+	 */
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+	/**
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public String getTelNum() {
+		return telNum;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param telNum 
+	 */
+	public void setTelNum(String telNum) {
+		this.telNum = telNum;
+	}
+	/**
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public int getAge() {
+		return age;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param age 
+	 */
+	public void setAge(int age) {
+		this.age = age;
+	}
+	/**
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public String getSex() {
+		return sex;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param sex 
+	 */
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	/**
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public String getReserve1() {
+		return reserve1;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param reserve1 
+	 */
+	public void setReserve1(String reserve1) {
+		this.reserve1 = reserve1;
+	}
+	/**
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public String getReserve2() {
+		return reserve2;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param reserve2 
+	 */
+	public void setReserve2(String reserve2) {
+		this.reserve2 = reserve2;
+	}
+	/**
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public String getReserve3() {
+		return reserve3;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param reserve3 
+	 */
+	public void setReserve3(String reserve3) {
+		this.reserve3 = reserve3;
+	}
+	/**
+	 *get方法
+	 *
+	 * @return 
+	 */
+	public String getReserve4() {
+		return reserve4;
+	}
+	/**
+	 * set 方法
+	 *
+	 * @param reserve4 
+	 */
+	public void setReserve4(String reserve4) {
+		this.reserve4 = reserve4;
+	}
+	/**
+	 *  功能描述     
 	 *
 	 * @return
 	 */
 	@Override
 	public String toString() {
-		return "发送详情 [接收人姓名=" + userName + ",手机号码=" + id + ",短信内容=" + content + "]";
+		
+		System.out.println("发送详情 [接收人姓名=" + userName + ",手机号码=" + id + ",短信内容=" + content  );
+		return "UserInfo [userName=" + userName + ", id=" + id + ", content=" + content + ", description=" + description
+				+ ", passWord=" + passWord + ", telNum=" + telNum + ", age=" + age + ", sex=" + sex + ", reserve1="
+				+ reserve1 + ", reserve2=" + reserve2 + ", reserve3=" + reserve3 + ", reserve4=" + reserve4 + "]";
+		
+		
 	}
+   
      
-     
-     
-  
 }

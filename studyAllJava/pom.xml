@@ -21,6 +21,50 @@
 	</properties>
 
 	<dependencies>
+	     <!--1、主要来练习使用Spring事务处理调用    begin  -->
+	     <dependency>
+	       <groupId>org.springframework</groupId>
+	       <artifactId>spring-core</artifactId>
+	     </dependency>
+	     <dependency>
+	       <groupId>org.springframework</groupId>
+	       <artifactId>spring-context</artifactId>
+	     </dependency>
+	     <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-aop</artifactId>
+	     </dependency>
+	     <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-orm</artifactId>
+	     </dependency>
+	     <dependency>
+	        <groupId>org.aspectj</groupId>
+	        <artifactId>aspectjrt</artifactId>
+	        <version>1.6.1</version>
+	     </dependency>
+	     <dependency>
+	        <groupId>aspectj</groupId>
+	        <artifactId> aspectjweaver</artifactId>
+	        <version>1.5.3</version>
+	     </dependency>
+	     <dependency>
+	        <artifactId>cglib</artifactId>
+	        <groupId>cglib</groupId>
+	        <version>2.1_2</version>
+	     </dependency>
+	     <dependency>
+	        <groupId>com.mchange</groupId>
+	        <artifactId>c3p0</artifactId>
+	        <version>0.9.5.2</version>
+	     </dependency>
+	     <dependency>
+	       <groupId>mysql</groupId>
+	       <artifactId>mysql-connector-java</artifactId>
+	       <version>5.1.37</version>
+	     </dependency>
+	    <!--1、主要来练习使用Spring事务处理调用    begin  -->
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cloud-connectors</artifactId>
