@@ -27,6 +27,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
+import com.days.beans.Log;
 import com.days.spring.dao.UserInfoDao;
 import com.days.spring.transaction.TransactionManager;
 import com.days.thread.batchSms.UserInfo;
@@ -45,8 +46,8 @@ public  class  UserInfoService{
 	
 	
 	@Transactional(propagation = Propagation.REQUIRED)
-	public  void  add() {
-		logService.addLog();
+	public  void  add(Log  log) {
+		logService.addLog(log);
 		
 		userDao.addUserInfo(user);
 		int  i=1/0;

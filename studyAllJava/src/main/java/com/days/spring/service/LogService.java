@@ -20,6 +20,7 @@
  */
 package com.days.spring.service;
 
+import com.days.beans.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -35,8 +36,8 @@ public  class  LogService{
 	private  LogDao  logDao;
 	
 	@Transactional(propagation = Propagation.NEVER)
-	public  void  addLog() {
-		logDao.addLog();
+	public  void  addLog(Log log) {
+		logDao.addLog(log);
 		System.out.println("  Service  调用DAO插入日志处理成功");
 	}
 	

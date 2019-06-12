@@ -35,6 +35,7 @@ public class UserInfo   implements  Serializable{
      private   String	description   ;
      private   String	passWord   ;
      private   String	telNum   ;
+     private   String	addr   ;
      private   int	age   ;
      private   String	sex   ;
      private   String	reserve1   ;
@@ -248,6 +249,13 @@ public class UserInfo   implements  Serializable{
 		
 		
 	}
-   
-     
+
+
+	public String getAddr() {
+		return addr;
+	}
+
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
 }

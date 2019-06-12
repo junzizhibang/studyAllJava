@@ -20,24 +20,33 @@
  */
 package com.days.spring.dao;
 
+import com.days.beans.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.StatementCallback;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public  class  LogDao{
 	
 	@Autowired
-	private  JdbcTemplate  jdbsTemplate;
-	
-	public   void  addLog() {
-		String  sql="insert into  log  values(null,?);"  ;
-		jdbsTemplate.update(sql,System.currentTimeMillis());
-		System.out.println("  添加数据操作成功！");
-				
+	private  JdbcTemplate jdbcTemplate  ;
+	public   void  addLog(Log log  ) {
+		String  sql=" insert  into  t_log  VALUES ( NULL, ?,?,?,?,?,?,?,?,? ); ";
+		int  count=jdbcTemplate.update(sql,log.getUserName(),log.getContent(),log.getDescription(),log.getCreDt(),log.getCreTime(),log.getReserve1(),
+				log.getReserve2(),log.getReserve3(),log.getReserve4() );
 	}
-}
 
+	private int  deleteLogbySql(Log log){
+			String  sql ="delete  from  T_Log  where  userName=?  or   content=? ";
+			int count  =jdbcTemplate.update(sql,log.getUserName(),log.getContent());
+			return  count;
+	}
+
+
+
+
+}
 
 
 

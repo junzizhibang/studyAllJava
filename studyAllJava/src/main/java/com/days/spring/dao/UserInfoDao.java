@@ -31,12 +31,19 @@ public  class  UserInfoDao{
 	
 	@Autowired
 	private  JdbcTemplate  jdbcTemplate;
-	
-	
-	public  void  addUserInfo(UserInfo  userinfo) {
-		String  sql="Insert into  userinfo(userName,id,content)  values(?,?,?);";
-		jdbcTemplate.update(sql,userinfo.getContent());
+
+	public  void  addUserInfo(UserInfo  user) {
+		String  sql="Insert into  t_userinfo values(null ,?,? ,?,?,?,?,?,?,?,?,?,?   );";
+		jdbcTemplate.update(sql,user.getUserName(),user.getContent(),user.getDescription(),user.getPassWord(),user.getTelNum(),
+				user.getAddr(),user.getAge(),user.getSex(),user.getReserve1(),user.getReserve2(),user.getReserve3(),user.getReserve4());
 		System.out.println("用户信息新增成功！！");
+	}
+	public  UserInfo  getUserInfobyName(String  userName){
+		UserInfo  user=null;
+		String sql ="select  *  from  T_userinfo  where  userName=?";
+		jdbcTemplate.queryForObject(sql,UserInfo.class,userName);
+
+		return   user;
 	}
 	
 }

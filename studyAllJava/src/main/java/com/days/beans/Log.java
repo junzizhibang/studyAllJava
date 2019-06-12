@@ -18,7 +18,7 @@
  * @email 1217575485@qq.com
  * 
  */
-package com.days.beans;
+package main.java.com.days.beans;
 
 import java.io.Serializable;
 
